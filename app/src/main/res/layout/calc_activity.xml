@@ -45,11 +45,10 @@
         android:id="@+id/tv_label_total"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="24dp"
         android:text="@string/total"
         android:textSize="24sp"
-        app:layout_constraintEnd_toStartOf="@+id/tv_tip"
-        app:layout_constraintHorizontal_bias="0.571"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_total" />
 
@@ -60,18 +59,16 @@
         android:layout_marginTop="24dp"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_total" />
 
     <TextView
         android:id="@+id/tv_total"
-        android:layout_width="328dp"
+        android:layout_width="230dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.542"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_percent" />
 
@@ -83,7 +80,7 @@
         android:autofillHints="@string/hint_edit_box"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/text_edit_box"
+        android:text="0.0"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
