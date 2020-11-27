@@ -9,7 +9,12 @@ import android.widget.EditText;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
+import java.text.NumberFormat;
+
 public class CalcActivity extends AppCompatActivity {
+
+    private static final NumberFormat currencyFormat= NumberFormat.getCurrencyInstance();
+    private static final NumberFormat percentFormat = NumberFormat.getPercentInstance();
 
     private double amount = 0.0; // Сумма счёта
     private double percent = 0.15; // Процент чаевых по умолчанию.
@@ -61,9 +66,9 @@ public class CalcActivity extends AppCompatActivity {
                 public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                     percent= progress / 100.0; // Назначение процента чаевых
                     // Вычисление чаевых и общей суммы. Вывод их на экран.
-                    tv_percent.setText(Double.toString(percent));
-                    tv_tip.setText(Double.toString(tipCalc.calculateTip(amount, percent)));
-                    tv_total.setText(Double.toString(tipCalc.calculateTotal(amount, percent)));
+                    tv_percent.setText(percentFormat.format(percent));
+                    tv_tip.setText(currencyFormat.format(tipCalc.calculateTip(amount,percent)));
+                    tv_total.setText(currencyFormat.format(tipCalc.calculateTotal(amount, percent)));
                 }
 
                 @Override
